@@ -6,6 +6,7 @@ export default function Portfolio() {
   const [displayText, setDisplayText] = useState("");
   const [showResume, setShowResume] = useState(false);
   const [time, setTime] = useState("");
+  const [dateStr, setDateStr] = useState("");
   const [activeSection, setActiveSection] = useState("intro");
   const fullText = "Arghya Mukherjee";
 
@@ -20,14 +21,19 @@ export default function Portfolio() {
     return () => clearInterval(typing);
   }, []);
 
-  // Live clock (UTC) — DevOps vibe
+  // Live clock (IST) — DevOps vibe
   useEffect(() => {
     const update = () => {
       const d = new Date();
-      const hh = String(d.getUTCHours()).padStart(2, "0");
-      const mm = String(d.getUTCMinutes()).padStart(2, "0");
-      const ss = String(d.getUTCSeconds()).padStart(2, "0");
-      setTime(`${hh}:${mm}:${ss} UTC`);
+      const istTime = new Date(d.getTime() + 5.5 * 60 * 60 * 1000);
+      const dd = String(istTime.getUTCDate()).padStart(2, "0");
+      const mm = String(istTime.getUTCMonth() + 1).padStart(2, "0");
+      const yyyy = istTime.getUTCFullYear();
+      const hh = String(istTime.getUTCHours()).padStart(2, "0");
+      const min = String(istTime.getUTCMinutes()).padStart(2, "0");
+      const ss = String(istTime.getUTCSeconds()).padStart(2, "0");
+      setTime(`${dd}/${mm}/${yyyy} ${hh}:${min}:${ss} IST`);
+      setDateStr(`${dd}/${mm}/${yyyy}`);
     };
     update();
     const id = setInterval(update, 1000);
@@ -150,8 +156,8 @@ export default function Portfolio() {
             <span className="sm:hidden">online</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
-            <span>region: ap-south-1</span>
-            <span>v2026.01</span>
+            <span>Kolkata,India</span>
+            <span>{dateStr}</span>
             <span>{time}</span>
           </div>
           <div className="md:hidden">{time}</div>
