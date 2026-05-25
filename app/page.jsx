@@ -95,7 +95,7 @@ export default function Portfolio() {
       title: "Cloud Infrastructure Automation",
       description: "Automated Azure infrastructure provisioning using Terraform and Azure DevOps.",
       stack: ["Terraform", "Azure", "Azure DevOps"],
-      link: "https://https://github.com/ArghyaMuk",
+      // link: "https://https://github.com/ArghyaMuk",
       status: "production",
     },
     {
@@ -103,7 +103,7 @@ export default function Portfolio() {
       title: "AKS Monitoring System",
       description: "Built Kubernetes monitoring and deployment workflows using AKS and Docker.",
       stack: ["AKS", "Docker", "Prometheus"],
-      link: "https://github.com/arghyamuk66",
+      // link: "https://github.com/arghyamuk66",
       status: "production",
     },
     {
@@ -111,7 +111,7 @@ export default function Portfolio() {
       title: "Inventory Management App",
       description: "Created a Docker-based inventory management application using Next.js.",
       stack: ["Next.js", "Docker", "Node"],
-      link: "https://github.com/arghyamuk66",
+      // link: "https://github.com/arghyamuk66",
       status: "active",
     },
   ];
@@ -492,14 +492,14 @@ export default function Portfolio() {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between pt-6 border-t border-[var(--line)]">
+                {/* <div className="flex items-center justify-between pt-6 border-t border-[var(--line)]">
                   <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--ink-mute)] group-hover:text-[var(--ink)] transition-colors">
                     view repository
                   </span>
                   <span className="text-[var(--ink-mute)] group-hover:text-[var(--accent)] group-hover:translate-x-1 transition-all">
                     ↗
                   </span>
-                </div>
+                </div> */}
               </a>
             ))}
           </div>
