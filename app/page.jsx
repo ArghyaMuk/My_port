@@ -70,8 +70,8 @@ export default function Portfolio() {
         ],
       },
     ],
-    education: [{ degree: "B.Tech in Computer Science", school: "XYZ University", year: "2022" }],
-    certifications: ["AZ-104 Microsoft Azure Administrator", "AZ-400 Microsoft DevOps Engineer Expert"],
+    education: [{ degree: "M.C.A in Computer Science", school: "LPU", year: "2024" }],
+    certifications: ["AZ-104 Microsoft Azure Administrator", "AI-102 Designing and Implementing an Azure AI Solution"],
   };
 
   const skills = [
